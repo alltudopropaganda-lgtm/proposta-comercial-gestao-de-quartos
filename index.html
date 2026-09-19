@@ -228,6 +228,53 @@
       margin-bottom: 12px;
     }
 
+    /* Scope Reduction Card Styling */
+    .scope-box {
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border: 1px solid #f59e0b;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.15);
+    }
+
+    .scope-title {
+      font-size: 14px;
+      color: #fbbf24;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .scope-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 12px;
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      border: 1px solid #334155;
+    }
+
+    .scope-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .scope-label {
+      font-size: 15px;
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    .scope-value {
+      font-size: 16px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
     /* Signatures Display Area */
     .signatures-section {
       background: #1e293b;
@@ -477,7 +524,7 @@
       <div class="subtitle">Gestão de Quartos & Operação de Hospedagem</div>
     </div>
 
-    <!-- MAIN HERO IMAGE (UNSPLASH LINK PERMANENTE) -->
+    <!-- MAIN HERO IMAGE -->
     <div class="image-card">
       <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" alt="Plataforma de Gestão de Hospedagem">
     </div>
@@ -489,7 +536,7 @@
       <p style="margin-bottom:0;">A solução será acessada diretamente pelo navegador, permitindo utilização em <strong>computador, tablet ou celular</strong>.</p>
     </div>
 
-    <!-- DASHBOARD PREVIEW IMAGE (UNSPLASH LINK PERMANENTE) -->
+    <!-- DASHBOARD PREVIEW IMAGE -->
     <div class="image-card">
       <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Dashboard da Plataforma">
     </div>
@@ -518,7 +565,7 @@
       </ul>
     </div>
 
-    <!-- AUTOMATION IMAGE (UNSPLASH LINK PERMANENTE) -->
+    <!-- AUTOMATION IMAGE -->
     <div class="image-card">
       <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=1000&q=80" alt="Automação e Comunicação">
     </div>
@@ -646,10 +693,30 @@
     </div>
 
     <!-- RESUMO DO INVESTIMENTO -->
-    <div style="background: #1e293b; border-radius: 16px; padding: 20px; border: 1px solid #334155; text-align: center; margin-bottom: 30px;">
+    <div style="background: #1e293b; border-radius: 16px; padding: 20px; border: 1px solid #334155; text-align: center; margin-bottom: 16px;">
       <div style="font-size: 14px; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Resumo do Investimento</div>
       <div style="font-size: 24px; font-weight: 800; color: #ffffff; margin-top: 4px;">Desenvolvimento: R$ 15.000,00</div>
       <div style="font-size: 18px; font-weight: 700; color: #34d399; margin-top: 2px;">Suporte + Hospedagem: R$ 397,00/mês</div>
+    </div>
+
+    <!-- NOVO CARD: INVESTIMENTO COM REDUÇÃO DE ESCOPO -->
+    <div class="scope-box">
+      <div class="scope-title">Investimento com Redução de Escopo</div>
+      
+      <div class="scope-item">
+        <span class="scope-label">Projeto Completo</span>
+        <span class="scope-value">R$ 15.000,00</span>
+      </div>
+
+      <div class="scope-item">
+        <span class="scope-label">Versão Inicial</span>
+        <span class="scope-value">R$ 10.000,00</span>
+      </div>
+
+      <div class="scope-item">
+        <span class="scope-label">Versão Essencial</span>
+        <span class="scope-value">R$ 7.500,00</span>
+      </div>
     </div>
 
     <!-- SIGNATURES DISPLAY CONTAINER -->
