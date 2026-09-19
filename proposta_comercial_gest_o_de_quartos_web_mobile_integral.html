@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial - Plataforma de Gestão de Quartos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b0f17;
+            color: #f1f5f9;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        canvas {
+            touch-action: none;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .gradient-border {
+            border: 1px solid transparent;
+            background-image: linear-gradient(#1e293b, #1e293b), linear-gradient(135deg, #3b82f6, #10b981);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Container Único de Coluna Fluida (Ideal para Celular e Desktop) -->
+    <main class="max-w-xl mx-auto min-h-screen bg-slate-900 shadow-2xl relative border-x border-slate-800/80 pb-36">
+
+        <!-- HEADER HERO -->
+        <header class="relative bg-slate-800 overflow-hidden border-b border-slate-800">
+            <div class="relative h-72">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" 
+                     alt="Hotelaria e Hospedagem" 
+                     class="w-full h-full object-cover brightness-50">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+                
+                <div class="absolute top-6 left-6 right-6 flex justify-between items-center">
+                    <span class="inline-flex items-center gap-1.5 bg-blue-600/90 text-white font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full shadow-lg backdrop-blur-md">
+                        <i class="fas fa-file-contract text-xs"></i> Proposta Comercial
+                    </span>
+                    <span class="text-xs text-slate-300 font-semibold bg-slate-800/80 px-3 py-1 rounded-full border border-slate-700">
+                        Exclusivo
+                    </span>
+                </div>
+
+                <div class="absolute bottom-6 left-6 right-6">
+                    <p class="text-blue-400 font-bold text-sm uppercase tracking-wider mb-1">Desenvolvimento de Plataforma</p>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight tracking-tight">
+                        Gestão de Quartos
+                    </h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO INTEGRAL -->
+        <div class="p-6 space-y-10">
+
+            <!-- INTRODUÇÃO -->
+            <div class="glass-card p-5 rounded-2xl border border-blue-500/20 text-slate-300 text-base leading-relaxed">
+                Desenvolvimento de plataforma web personalizada para gestão de quartos, reservas e operação da hospedagem.
+            </div>
+
+            <!-- 1. OBJETIVO -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-extrabold border border-blue-500/30">
+                        1
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Objetivo</h2>
+                </div>
+                
+                <div class="space-y-3 text-slate-300 text-base leading-relaxed">
+                    <p>
+                        Desenvolver e disponibilizar uma plataforma própria para centralizar a gestão da hospedagem, permitindo maior organização das informações, controle operacional e acompanhamento da ocupação.
+                    </p>
+                    <p class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 text-slate-200">
+                        <i class="fas fa-desktop text-blue-400 mr-2"></i>
+                        A solução será acessada diretamente pelo navegador, permitindo utilização em <strong>computador, tablet ou celular</strong>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2. ESCOPO DA PLATAFORMA -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-extrabold border border-blue-500/30">
+                        2
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Escopo da Plataforma</h2>
+                </div>
+
+                <p class="text-slate-300 text-base">
+                    A plataforma contempla a estrutura necessária para gerenciamento da operação, incluindo:
+                </p>
+
+                <div class="grid grid-cols-1 gap-2.5 pt-1">
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-chart-line text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Dashboard de gestão</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-bed text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Cadastro e gerenciamento de quartos</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-calendar-alt text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Controle de disponibilidade</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-book-bookmark text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Gestão de reservas</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-users text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Cadastro e gerenciamento de hóspedes</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-hotel text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Controle de informações das hospedagens</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-wallet text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Gestão financeira</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-history text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Histórico das operações</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-user-shield text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Controle de usuários e acessos</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-sliders text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Área administrativa</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-database text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Organização das informações em banco de dados</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-mobile-screen-button text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Interface responsiva</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-cubes text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Estrutura preparada para futuras evoluções</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-cloud-arrow-up text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Hospedagem e publicação da aplicação</span>
+                    </div>
+                    <div class="flex items-center p-3.5 bg-slate-800/70 rounded-xl border border-slate-700/50">
+                        <i class="fas fa-screwdriver-wrench text-blue-400 text-lg w-8"></i>
+                        <span class="text-slate-200 font-medium">Correções técnicas durante a implantação</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Dashboard -->
+                <div class="relative rounded-2xl overflow-hidden my-6 border border-slate-800 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" 
+                         alt="Dashboard e Painel de Controle" 
+                         class="w-full h-52 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+                    <p class="absolute bottom-3 left-4 right-4 text-xs text-slate-300 font-medium flex items-center gap-2">
+                        <i class="fas fa-chart-pie text-blue-400"></i> Painel de Gestão Operacional em Tempo Real
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. DESENVOLVIMENTO PERSONALIZADO -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-extrabold border border-blue-500/30">
+                        3
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Desenvolvimento Personalizado</h2>
+                </div>
+
+                <p class="text-slate-300 text-base leading-relaxed">
+                    A plataforma será desenvolvida especificamente para a operação do cliente, permitindo que novas funcionalidades sejam incorporadas posteriormente.
+                </p>
+
+                <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-800 space-y-3">
+                    <p class="text-sm font-semibold text-slate-200">Entre as possibilidades de evolução estão:</p>
+                    <ul class="grid grid-cols-1 gap-2 text-sm text-slate-300">
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Integração com WhatsApp</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Automação de atendimento</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Pagamentos online</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Confirmação automática de reservas</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Relatórios avançados</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Integração com plataformas de hospedagem</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Aplicativo</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Inteligência artificial</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Integrações via API</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Múltiplas unidades</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Controle avançado de usuários</li>
+                        <li class="flex items-center"><i class="fas fa-circle-dot text-blue-400 text-xs mr-2.5"></i> Automação financeira</li>
+                    </ul>
+                    <p class="text-xs text-slate-400 pt-2 border-t border-slate-700/50 italic">
+                        Essas funcionalidades poderão ser contratadas posteriormente conforme a necessidade da operação.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 4. INVESTIMENTO -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-extrabold border border-blue-500/30">
+                        4
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Investimento</h2>
+                </div>
+
+                <!-- Main Card -->
+                <div class="bg-gradient-to-br from-blue-950/80 via-slate-800 to-slate-900 p-6 rounded-3xl border border-blue-500/40 shadow-2xl space-y-5">
+                    <div class="space-y-1">
+                        <span class="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+                            Desenvolvimento e Implantação da Plataforma
+                        </span>
+                        <div class="pt-3 text-4xl font-black text-white tracking-tight">
+                            R$ 15.000<span class="text-2xl text-slate-300">,00</span>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-slate-300 border-t border-slate-700/60 pt-3">
+                        O investimento contempla o desenvolvimento, configuração, implantação e disponibilização da versão acordada da plataforma.
+                    </p>
+
+                    <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-700/60 space-y-2">
+                        <div class="text-xs font-bold text-slate-400 uppercase">Condição Sugerida</div>
+                        <div class="flex justify-between items-center text-sm py-1 border-b border-slate-800">
+                            <span class="text-slate-300">50% na contratação:</span>
+                            <span class="font-bold text-blue-400">R$ 7.500,00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm py-1">
+                            <span class="text-slate-300">50% na entrega da primeira versão operacional:</span>
+                            <span class="font-bold text-blue-400">R$ 7.500,00</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/40 p-3.5 rounded-xl border border-slate-800 text-center text-xs text-slate-300">
+                        <i class="fas fa-handshake text-blue-400 mr-1.5"></i>
+                        <strong>Também poderá ser negociado:</strong> 3 parcelas de R$ 5.000,00
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. SUPORTE, HOSPEDAGEM E MANUTENÇÃO -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-extrabold border border-blue-500/30">
+                        5
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Suporte, Hospedagem e Manutenção</h2>
+                </div>
+
+                <p class="text-slate-300 text-base">
+                    Após a implantação, poderá ser contratado um plano mensal para manutenção e suporte da plataforma.
+                </p>
+
+                <div class="bg-slate-800/80 p-6 rounded-3xl border border-emerald-500/30 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-emerald-400 tracking-wider">Plano de Suporte</span>
+                            <h3 class="text-2xl font-extrabold text-white">R$ 397,00<span class="text-sm font-normal text-slate-400">/mês</span></h3>
+                        </div>
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl border border-emerald-500/20">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 border-t border-slate-700/60 pt-3 text-sm text-slate-300">
+                        <p class="font-semibold text-slate-200">Incluindo:</p>
+                        <div class="grid grid-cols-1 gap-2">
+                            <div class="flex items-center"><i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i> Hospedagem da aplicação</div>
+                            <div class="flex items-center"><i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i> Monitoramento básico</div>
+                            <div class="flex items-center"><i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i> Correções técnicas</div>
+                            <div class="flex items-center"><i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i> Atualizações necessárias</div>
+                            <div class="flex items-center"><i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i> Backup da estrutura de dados</div>
+                            <div class="flex items-center"><i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i> Suporte técnico</div>
+                            <div class="flex items-center"><i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i> Pequenos ajustes operacionais</div>
+                            <div class="flex items-center"><i class="fas fa-check text-emerald-400 text-xs mr-2.5"></i> Acompanhamento da plataforma</div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-400 border-t border-slate-700/60 pt-3">
+                        Novas funcionalidades ou alterações estruturais serão avaliadas e orçadas separadamente.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 6. EVOLUÇÃO DA PLATAFORMA -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-extrabold border border-blue-500/30">
+                        6
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Evolução da Plataforma</h2>
+                </div>
+
+                <p class="text-slate-300 text-base leading-relaxed">
+                    A plataforma será tratada como um sistema em evolução. Novos módulos poderão ser desenvolvidos conforme o crescimento da operação.
+                </p>
+
+                <!-- Imagem Automação / WhatsApp -->
+                <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-xl my-4">
+                    <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=1000&q=80" 
+                         alt="Automação e Comunicação" 
+                         class="w-full h-44 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+                    <p class="absolute bottom-3 left-4 right-4 text-xs text-slate-300 font-medium">
+                        <i class="fab fa-whatsapp text-emerald-400 mr-1.5"></i> Preparado para integrações futuras com WhatsApp e IA
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-2.5 text-sm">
+                    <div class="flex justify-between items-center p-3.5 bg-slate-800/60 rounded-xl border border-slate-700/50">
+                        <span class="text-slate-200 font-medium">Módulo WhatsApp + Automação</span>
+                        <span class="text-xs text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800">Orçamento separado</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-800/60 rounded-xl border border-slate-700/50">
+                        <span class="text-slate-200 font-medium">Módulo Financeiro Avançado</span>
+                        <span class="text-xs text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800">Orçamento separado</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-800/60 rounded-xl border border-slate-700/50">
+                        <span class="text-slate-200 font-medium">Motor de Reservas</span>
+                        <span class="text-xs text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800">Orçamento separado</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-800/60 rounded-xl border border-slate-700/50">
+                        <span class="text-slate-200 font-medium">Integração com Booking/Airbnb e outros canais</span>
+                        <span class="text-xs text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800">Orçamento separado</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-800/60 rounded-xl border border-slate-700/50">
+                        <span class="text-slate-200 font-medium">Agente de IA para atendimento</span>
+                        <span class="text-xs text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800">Orçamento separado</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3.5 bg-slate-800/60 rounded-xl border border-slate-700/50">
+                        <span class="text-slate-200 font-medium">Aplicativo mobile</span>
+                        <span class="text-xs text-slate-400 bg-slate-900 px-2.5 py-1 rounded-md border border-slate-800">Orçamento separado</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. DIFERENCIAL DA SOLUÇÃO -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-extrabold border border-blue-500/30">
+                        7
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Diferencial da Solução</h2>
+                </div>
+
+                <div class="bg-gradient-to-r from-blue-900/30 to-indigo-900/30 p-5 rounded-2xl border border-blue-500/30 space-y-3">
+                    <p class="text-slate-200 text-base leading-relaxed">
+                        A proposta não consiste simplesmente na criação de uma página ou website.
+                    </p>
+                    <p class="text-slate-200 text-base leading-relaxed font-semibold text-blue-300">
+                        Trata-se do desenvolvimento de uma plataforma própria de gestão, criada para centralizar processos e permitir futuras integrações e automações.
+                    </p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        A estrutura poderá acompanhar a evolução da empresa sem depender exclusivamente de uma solução pronta de terceiros.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 8. PRAZO -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-extrabold border border-blue-500/30">
+                        8
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Prazo</h2>
+                </div>
+
+                <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700/60 space-y-2">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Prazo estimado de implantação:</p>
+                    <div class="text-3xl font-black text-white">30 a 60 dias</div>
+                    <p class="text-sm text-slate-300 pt-1">
+                        Conforme definição final do escopo, ajustes e validações.
+                    </p>
+                    <p class="text-xs text-slate-400 border-t border-slate-700/50 pt-2 italic">
+                        O cronograma definitivo será estabelecido após a aprovação da proposta e definição das funcionalidades da primeira versão.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 9. CONSIDERAÇÕES -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 border-b border-slate-800 pb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg font-extrabold border border-blue-500/30">
+                        9
+                    </div>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Considerações</h2>
+                </div>
+
+                <ul class="space-y-2.5 text-sm text-slate-300">
+                    <li class="flex items-start"><i class="fas fa-angle-right text-blue-400 mt-1 mr-2.5"></i> <span>O valor apresentado considera o desenvolvimento da plataforma conforme o escopo definido nesta proposta.</span></li>
+                    <li class="flex items-start"><i class="fas fa-angle-right text-blue-400 mt-1 mr-2.5"></i> <span>Alterações ou novas funcionalidades solicitadas após a aprovação do escopo poderão gerar orçamento adicional.</span></li>
+                    <li class="flex items-start"><i class="fas fa-angle-right text-blue-400 mt-1 mr-2.5"></i> <span>A plataforma será entregue em ambiente online e preparada para utilização operacional.</span></li>
+                </ul>
+            </section>
+
+            <!-- RESUMO DO INVESTIMENTO -->
+            <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 space-y-2 text-center">
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Resumo do Investimento</div>
+                <div class="text-lg font-bold text-white">DESENVOLVIMENTO: <span class="text-blue-400">R$ 15.000,00</span></div>
+                <div class="text-base font-semibold text-slate-300">SUPORTE + HOSPEDAGEM: <span class="text-emerald-400">R$ 397,00/mês</span></div>
+            </div>
+
+            <!-- FECHAMENTO -->
+            <div class="p-6 rounded-2xl bg-gradient-to-r from-blue-900 to-indigo-900 text-center border border-blue-500/30 space-y-2">
+                <i class="fas fa-rocket text-3xl text-blue-300 mb-1"></i>
+                <p class="text-base font-bold text-white leading-snug">
+                    Tecnologia para transformar a gestão em uma operação mais simples, organizada e escalável.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- BARRA FIXA INFERIOR PARA ACEITE -->
+        <div class="fixed bottom-0 left-0 right-0 max-w-xl mx-auto p-4 bg-slate-900/90 backdrop-blur-xl border-t border-slate-800 z-40">
+            <button onclick="openSignatureModal()" 
+                    class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 active:scale-95 text-white font-extrabold text-lg py-4 px-6 rounded-2xl shadow-xl shadow-blue-600/30 flex items-center justify-center space-x-3 transition-all duration-200">
+                <i class="fas fa-pen-nib"></i>
+                <span>Aceitar e Assinar Digitalmente</span>
+            </button>
+        </div>
+
+        <!-- MODAL DE ASSINATURA DIGITAL -->
+        <div id="signatureModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center hidden opacity-0 transition-opacity duration-300">
+            <div class="bg-slate-900 border border-slate-800 w-full max-w-xl rounded-t-3xl sm:rounded-3xl p-6 space-y-5 shadow-2xl max-h-[90vh] overflow-y-auto">
+                
+                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fas fa-file-signature text-blue-400"></i> Aceite da Proposta
+                    </h3>
+                    <button onclick="closeSignatureModal()" class="text-slate-400 hover:text-white p-2">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-slate-300 text-sm font-medium mb-1">Nome Completo</label>
+                        <input type="text" id="signerName" placeholder="Digite seu nome completo" 
+                               class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl p-3 focus:outline-none focus:border-blue-500 text-base">
+                    </div>
+
+                    <div>
+                        <label class="block text-slate-300 text-sm font-medium mb-1">CPF ou CNPJ</label>
+                        <input type="text" id="signerDoc" placeholder="000.000.000-00" 
+                               class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl p-3 focus:outline-none focus:border-blue-500 text-base">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="block text-slate-300 text-sm font-medium">Assinatura Digital (Desenhe abaixo)</label>
+                            <button type="button" onclick="clearCanvas()" class="text-xs text-blue-400 hover:underline font-semibold">Limpar Assinatura</button>
+                        </div>
+                        <div class="bg-slate-950 border border-slate-700 rounded-xl overflow-hidden touch-none relative">
+                            <canvas id="sigCanvas" class="w-full h-40 cursor-crosshair"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="submitSignature()" 
+                        class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-4 rounded-xl shadow-lg shadow-emerald-600/30 text-lg transition-all">
+                    Confirmar e Enviar Aceite
+                </button>
+            </div>
+        </div>
+
+        <!-- OVERLAY DE SUCESSO -->
+        <div id="successOverlay" class="fixed inset-0 bg-slate-900 z-50 flex items-center justify-center p-6 hidden">
+            <div class="text-center space-y-6 max-w-sm">
+                <div class="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-4xl mx-auto border border-emerald-500/30">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-white">Proposta Aceita!</h3>
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Obrigado! A assinatura foi registrada com sucesso. Entraremos em contato para iniciar o projeto.
+                </p>
+                <button onclick="window.location.reload()" class="bg-slate-800 text-slate-300 px-6 py-3 rounded-xl border border-slate-700 text-sm font-semibold">
+                    Fechar
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- SCRIPTS INTERATIVOS -->
+    <script>
+        const modal = document.getElementById('signatureModal');
+        const canvas = document.getElementById('sigCanvas');
+        const ctx = canvas.getContext('2d');
+        let isDrawing = false;
+
+        function openSignatureModal() {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            resizeCanvas();
+        }
+
+        function closeSignatureModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function resizeCanvas() {
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+            ctx.strokeStyle = '#60a5fa';
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+        }
+
+        function startDrawing(e) {
+            isDrawing = true;
+            ctx.beginPath();
+            const pos = getPos(e);
+            ctx.moveTo(pos.x, pos.y);
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            const pos = getPos(e);
+            ctx.lineTo(pos.x, pos.y);
+            ctx.stroke();
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        function getPos(e) {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            return {
+                x: clientX - rect.left,
+                y: clientY - rect.top
+            };
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+
+        canvas.addEventListener('touchstart', (e) => { e.preventDefault(); startDrawing(e); });
+        canvas.addEventListener('touchmove', (e) => { e.preventDefault(); draw(e); });
+        canvas.addEventListener('touchend', stopDrawing);
+
+        function submitSignature() {
+            const name = document.getElementById('signerName').value.trim();
+            const doc = document.getElementById('signerDoc').value.trim();
+
+            if (!name || !doc) {
+                alert('Por favor, preencha seu Nome Completo e CPF/CNPJ.');
+                return;
+            }
+
+            closeSignatureModal();
+            setTimeout(() => {
+                document.getElementById('successOverlay').classList.remove('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
